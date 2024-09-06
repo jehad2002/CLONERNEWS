@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        /* إعادة تعيين بعض الأنماط الافتراضية */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* خلفية رمادية فاتحة */
+            display: flex;
+            flex-direction: column; /* ترتيب العناصر عمودياً */
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* ارتفاع كامل للنافذة */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem; /* حجم خط كبير للرسالة الترحيبية */
+            color: #333333; /* لون رمادي داكن للنص */
+            margin-bottom: 20px; /* مساحة أسفل العنوان */
+        }
+
+        button {
+            font-size: 1.25rem; /* حجم خط أكبر للزر */
+            padding: 10px 20px;
+            color: #ffffff; /* لون النص أبيض */
+            background-color: #007bff; /* خلفية زرقاء */
+            border: none;
+            border-radius: 5px; /* زوايا مدورة للزر */
+            cursor: pointer;
+            transition: background-color 0.3s; /* انتقال سلس للون الخلفية عند التمرير */
+            margin-top: 20px; /* مساحة فوق الزر لتفصل بينه وبين النص */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* لون أزرق أغمق عند التمرير */
+        }
+
+        button:focus {
+            outline: none; /* إزالة حدود التركيز الافتراضية */
+        }
+
+        .contact-link {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    </header>
+    
+    <h1>WELCOME TO HACKERNEWS UI</h1>
+    <button id="enter-btn">ENTER</button>
+    
+    <script>
+        document.getElementById('enter-btn').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

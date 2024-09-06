@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerNews UI</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem; /* Adjusted for better scalability */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #post-container {
+            padding: 20px;
+        }
+
+        .post {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .post h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .post p {
+            margin: 5px 0;
+        }
+
+        .comments-container {
+            margin-top: 10px;
+        }
+
+        .comment {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #load-more-btn {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #load-more-btn:hover {
+            background-color: #357abd;
+        }
+
+        #loading-text {
+            margin: 10px 0;
+        }
+
+        #comment-filter {
+            margin: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            #load-more-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HackerNews UI</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="post-container">
+        <!-- Posts will be dynamically loaded here -->
+    </main>
+
+    <footer>
+        <button id="load-more-btn">Load More Posts</button>
+        <p id="loading-text" style="display:none;">Loading more posts...</p>
+    </footer>
+
+    <div id="live-update-container"></div>
+    <select id="comment-filter">
+        <option value="all">All</option>
+        <option value="high">High Score</option>
+        <option value="low">Low Score</option>
+    </select>
+
+    <div id="loading-message" style="display:none;">Loading...</div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        main h1 {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-switcher button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="welcome.html">Welcome</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="language-switcher">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('ar')">العربية</button>
+        </div>
+
+        <div id="content-en">
+            <h1>About Us</h1>
+            <p>Welcome to our "About Us" page. Our mission is to create an intuitive and dynamic UI for the HackerNews API, allowing users to stay updated with the latest in technology and tech jobs.</p>
+            
+            <h2>Objectives:</h2>
+            <ul>
+                <li><strong>Posts:</strong> Our platform handles various types of posts including stories, jobs, and polls. Posts and comments are ordered by newest first, and users can load more as needed.</li>
+                <li><strong>Comments:</strong> Each comment is linked to its respective post. Comments are displayed with the post parent and are ordered from newest to oldest.</li>
+                <li><strong>Live Data Updates:</strong> We provide live updates every 5 seconds to ensure users are informed of the latest changes and new posts.</li>
+                <li><strong>API Optimization:</strong> We avoid overloading the API by optimizing requests and using throttling/debouncing techniques to manage data retrieval efficiently.</li>
+                <li><strong>Optional Features:</strong> Nested comments for posts, jobs, and polls can be implemented for a more detailed discussion view.</li>
+            </ul>
+
+            <h2>Our Approach:</h2>
+            <p>We focus on providing a seamless experience by ensuring that our UI is user-friendly and that the latest information is always at your fingertips. Our platform is designed to keep up with the rapid evolution of technology.</p>
+            
+            <p>If you encounter any issues or have suggestions for improvements, feel free to reach out to us!</p>
+        </div>
+
+        <div id="content-ar" style="display: none;">
+            <h1>معلومات عنا</h1>
+            <p>مرحبًا بكم في صفحة "معلومات عنا". مهمتنا هي إنشاء واجهة مستخدم ديناميكية وسهلة الاستخدام لواجهة برمجة تطبيقات HackerNews، مما يتيح للمستخدمين متابعة أحدث المعلومات في التكنولوجيا ووظائف التقنية.</p>
+
+            <h2>الأهداف:</h2>
+            <ul>
+                <li><strong>المنشورات:</strong> منصتنا تتعامل مع أنواع مختلفة من المنشورات بما في ذلك القصص والوظائف والاستطلاعات. يتم ترتيب المنشورات والتعليقات من الأحدث أولاً، ويمكن للمستخدمين تحميل المزيد حسب الحاجة.</li>
+                <li><strong>التعليقات:</strong> كل تعليق مرتبط بالمنشور الخاص به. يتم عرض التعليقات مع المنشور الأصلي وتكون مرتبة من الأحدث إلى الأقدم.</li>
+                <li><strong>تحديثات البيانات الحية:</strong> نقدم تحديثات حية كل 5 ثوانٍ لضمان إبلاغ المستخدمين بأحدث التغييرات والمنشورات الجديدة.</li>
+                <li><strong>تحسين API:</strong> نتجنب تحميل API بشكل مفرط من خلال تحسين الطلبات واستخدام تقنيات التخفيف/التخفيف لإدارة استرجاع البيانات بكفاءة.</li>
+                <li><strong>الميزات الاختيارية:</strong> يمكن تنفيذ التعليقات المتداخلة للمنشورات والوظائف والاستطلاعات للحصول على عرض أكثر تفصيلًا للنقاشات.</li>
+            </ul>
+
+            <h2>نهجنا:</h2>
+            <p>نركز على تقديم تجربة سلسة من خلال ضمان أن تكون واجهتنا سهلة الاستخدام وأن تكون أحدث المعلومات دائمًا في متناول يدك. تم تصميم منصتنا لمواكبة التطور السريع للتكنولوجيا.</p>
+            
+            <p>إذا واجهت أي مشاكل أو كانت لديك اقتراحات للتحسين، لا تتردد في التواصل معنا!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+    <script>
+        function setLanguage(language) {
+            if (language === 'en') {
+                document.getElementById('content-en').style.display = 'block';
+                document.getElementById('content-ar').style.display = 'none';
+            } else if (language === 'ar') {
+                document.getElementById('content-en').style.display = 'none';
+                document.getElementById('content-ar').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

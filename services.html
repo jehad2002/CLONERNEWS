@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        /* إعادة تعيين بعض أنماط المتصفح الافتراضية */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+        /* تنسيق الجسم الأساسي */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* تنسيق الرأس */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        /* تنسيق التنقل */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        /* تنسيق المحتوى الرئيسي */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        main h1 {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* تنسيق زر تغيير اللغة */
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-switcher button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="welcome.html">Welcome</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="language-switcher">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('ar')">العربية</button>
+        </div>
+
+        <div id="content-en">
+            <h1>Our Services</h1>
+            <p>Welcome to our Services page! Here’s how we help you stay updated with the latest in technology through our HackerNews UI:</p>
+
+            <h2>Features:</h2>
+            <ul>
+                <li><strong>Posts:</strong> We handle various types of posts including stories, jobs, and polls. Each post type is displayed with the most recent ones first, and users can load more posts as needed.</li>
+                <li><strong>Comments:</strong> Comments are linked to their respective posts. Each comment will include its parent post, and comments will be ordered from newest to oldest.</li>
+                <li><strong>Live Updates:</strong> Our UI will provide live updates every 5 seconds to keep users informed about the latest changes and new posts. This ensures that you’re always up-to-date with the newest information.</li>
+                <li><strong>Optimized API Integration:</strong> We use optimized techniques to reduce unnecessary API requests and avoid rate limiting. This includes debouncing and throttling functions to manage data retrieval efficiently.</li>
+            </ul>
+
+            <h2>API Integration:</h2>
+            <p>We integrate with the HackerNews API to fetch and display posts, comments, and other data. The API provides a wealth of information, which we utilize to present the most relevant and current updates to our users.</p>
+
+            <h2>Optional Features:</h2>
+            <p>For an enhanced experience, we may implement nested comments for stories, jobs, and polls, providing a more detailed view of discussions.</p>
+            
+            <p>If you encounter any issues or have suggestions for improvements, please let us know!</p>
+        </div>
+
+        <div id="content-ar" style="display: none;">
+            <h1>خدماتنا</h1>
+            <p>مرحبًا بكم في صفحة خدماتنا! إليكم كيف نساعدكم في متابعة أحدث التطورات في التكنولوجيا من خلال واجهة المستخدم الخاصة بنا من HackerNews:</p>
+
+            <h2>الميزات:</h2>
+            <ul>
+                <li><strong>المنشورات:</strong> نحن نتعامل مع أنواع مختلفة من المنشورات بما في ذلك القصص والوظائف والاستطلاعات. يتم عرض كل نوع من المنشورات مع الأحدث أولاً، ويمكن للمستخدمين تحميل المزيد من المنشورات عند الحاجة.</li>
+                <li><strong>التعليقات:</strong> التعليقات مرتبطة بالمنشورات الخاصة بها. ستتضمن كل تعليق المنشور الأصلي، وستكون التعليقات مرتبة من الأحدث إلى الأقدم.</li>
+                <li><strong>التحديثات الحية:</strong> ستوفر واجهة المستخدم لدينا تحديثات حية كل 5 ثوانٍ لإبقاء المستخدمين على اطلاع بأحدث التغييرات والمنشورات الجديدة. هذا يضمن أنك دائمًا على اطلاع بأحدث المعلومات.</li>
+                <li><strong>تكامل API الأمثل:</strong> نستخدم تقنيات محسّنة لتقليل الطلبات غير الضرورية على API وتجنب تحديد المعدل. يشمل ذلك وظائف التخفيف والتخفيف لإدارة استرجاع البيانات بكفاءة.</li>
+            </ul>
+
+            <h2>تكامل API:</h2>
+            <p>نتكامل مع API الخاص بـ HackerNews لاسترجاع وعرض المنشورات والتعليقات والبيانات الأخرى. يوفر API مجموعة كبيرة من المعلومات، والتي نستخدمها لتقديم أحدث وأهم التحديثات لمستخدمينا.</p>
+
+            <h2>الميزات الاختيارية:</h2>
+            <p>لتجربة محسنة، قد نقوم بتنفيذ التعليقات المتداخلة للقصص والوظائف والاستطلاعات، مما يوفر عرضًا أكثر تفصيلًا للنقاشات.</p>
+            
+            <p>إذا واجهت أي مشاكل أو كان لديك اقتراحات للتحسين، يرجى إبلاغنا!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+
+    <script>
+        function setLanguage(language) {
+            if (language === 'en') {
+                document.getElementById('content-en').style.display = 'block';
+                document.getElementById('content-ar').style.display = 'none';
+            } else if (language === 'ar') {
+                document.getElementById('content-en').style.display = 'none';
+                document.getElementById('content-ar').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
